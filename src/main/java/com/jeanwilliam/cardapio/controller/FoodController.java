@@ -16,7 +16,7 @@ import java.util.List;
 public class FoodController {
     private final FoodRepository foodRepository;
 
-    @CrossOrigin(origins = "https://cardapio-five-gamma.vercel.app", allowedHeaders = "*")
+    @CrossOrigin(origins = "https://cardapio-git-main-jeanwiiliams-projects.vercel.app/", allowedHeaders = "*")
     @PostMapping
     public ResponseEntity<String> create(@RequestBody FoodRequestDTO foodDTO){
         Food food = new Food(foodDTO);
@@ -24,7 +24,7 @@ public class FoodController {
         return ResponseEntity.ok("Food created successfully");
     }
 
-    @CrossOrigin(origins = "https://cardapio-five-gamma.vercel.app", allowedHeaders = "*")
+    @CrossOrigin(origins = "https://cardapio-git-main-jeanwiiliams-projects.vercel.app/", allowedHeaders = "*")
     @GetMapping
     public List<FoodResponseDTO> getAll(){
         return foodRepository.findAll()
